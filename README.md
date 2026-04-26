@@ -20,16 +20,16 @@ A high-performance, aggressively modular **Multi-tenant SaaS** engine. Designed 
 ```mermaid
 graph TD
     %% Core Infrastructure
-    User([End User / Frontend Client])
-    Gateway[Next.js App Shell \n (Dashboard UI)]
-    API[NestJS Core Engine \n (API Gateway)]
-    MainDB[(Main PostgreSQL \n SaaS Registry)]
-    Redis[(Redis Cache \n Connection Pool & Auth)]
+    User(["End User / Frontend Client"])
+    Gateway["Next.js App Shell <br> (Dashboard UI)"]
+    API["NestJS Core Engine <br> (API Gateway)"]
+    MainDB[("Main PostgreSQL <br> SaaS Registry")]
+    Redis[("Redis Cache <br> Connection Pool & Auth")]
     
     %% Tenant Databases
-    T1_DB[(Tenant 1 DB \n Health Clinic)]
-    T2_DB[(Tenant 2 DB \n Logistics)]
-    Tn_DB[(Tenant N DB \n ...)]
+    T1_DB[("Tenant 1 DB <br> Health Clinic")]
+    T2_DB[("Tenant 2 DB <br> Logistics")]
+    Tn_DB[("Tenant N DB <br> ...")]
     
     %% Networking
     User -.->|x-tenant-id| Gateway
